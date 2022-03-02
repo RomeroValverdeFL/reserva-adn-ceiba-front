@@ -1,85 +1,77 @@
-<div class="container">
-    <br><br>
-    <mat-card class="primary-card">
-        <div style="font-size: 12px">
+<div class="container-fluid">
 
-            <form [formGroup]="reactiveForm">
-                <div>
-                    <h2>Registrar sucursal</h2>
-                    <br>
-                    <p>
-                        <mat-form-field appearance="outline">
-                            <mat-label>Nombre</mat-label>
-                            <input validar matInput placeholder="Placeholder" formControlName="nombre">
-                        </mat-form-field>
-                    </p>
-                    <p>
-                        <mat-form-field appearance="outline">
-                            <mat-label>Descripcion</mat-label>
-                            <input validar matInput placeholder="Placeholder" formControlName="descripcion">
-                        </mat-form-field>
-                    </p>
-                    <p>
-                        <mat-form-field appearance="outline">
-                            <mat-label>Pais</mat-label>
-                            <mat-select validar formControlName="pais">
-                                <mat-option value="perú">Perú</mat-option>
-                                <mat-option value="brasil">Brasil</mat-option>
-                                <mat-option value="colombia">Colombia</mat-option>
-                            </mat-select>
-                        </mat-form-field>
-                    </p>
-                    <p>
-                        <mat-form-field appearance="outline">
-                            <mat-label>Ciudad</mat-label>
-                            <input validar matInput placeholder="Placeholder" formControlName="ciudad">
-                        </mat-form-field>
-                    </p>
-                    <p>
-                        <mat-form-field appearance="outline">
-                            <mat-label>Direccion</mat-label>
-                            <input validar matInput placeholder="Placeholder" formControlName="direccion">
-                        </mat-form-field>
-                    </p>
-                    <p>
-                        <mat-form-field appearance="outline">
-                            <mat-label>Dimension</mat-label>
-                            <input validar matInput placeholder="Placeholder" formControlName="dimension">
-                        </mat-form-field>
-                    </p>
-                    <p>
-                        <mat-form-field appearance="outline">
-                            <mat-label>Numero de pisos</mat-label>
-                            <input validar matInput placeholder="Placeholder" formControlName="numeroPisos">
-                        </mat-form-field>
-                    </p>
-                    <p>
-                        <mat-form-field appearance="outline">
-                            <mat-label>Numero de habitaciones</mat-label>
-                            <input validar matInput placeholder="Placeholder" formControlName="numeroHabitaciones">
-                        </mat-form-field>
-                    </p>
-                    <p>
-                        <mat-form-field appearance="outline">
-                            <mat-label>Tarifa por noche (US)</mat-label>
-                            <input validar matInput placeholder="Placeholder" formControlName="tarifaPorNoche">
-                        </mat-form-field>
-                    </p>
-                    <p>
-                        <mat-form-field appearance="outline">
-                            <mat-label>Estatus</mat-label>
-                            <mat-select validar formControlName="pais">
-                                <mat-option value="activo">Activo</mat-option>
-                                <mat-option value="inactivo">Inactivo</mat-option>
-                            </mat-select>
-                        </mat-form-field>
-                    </p>
-                    <div>
-                        <button mat-raised-button color="primary" (click)="submitForm()">Registrar</button>
-                    </div>
-                </div>
-            </form>
+    <form [formGroup]="reactiveForm">
+        <div>
+            <h2>Registrar sucursal</h2>
+            <br>
+            <div class="form-group">
+                    <label>Nombre</label>
+                    <input class="form-control" validar matInput placeholder="Placeholder" formControlName="nombre">
+            </div>
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Descripcion</mat-label>
+                    <input validar matInput placeholder="Placeholder" formControlName="descripcion">
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Pais</mat-label>
+                    <mat-select validar formControlName="pais">
+                        <mat-option value="perú">Perú</mat-option>
+                        <mat-option value="brasil">Brasil</mat-option>
+                        <mat-option value="colombia">Colombia</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Ciudad</mat-label>
+                    <input validar matInput placeholder="Placeholder" formControlName="ciudad">
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Direccion</mat-label>
+                    <input validar matInput placeholder="Placeholder" formControlName="direccion">
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Dimension</mat-label>
+                    <input validar matInput placeholder="Placeholder" formControlName="dimension">
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Numero de pisos</mat-label>
+                    <input validar matInput placeholder="Placeholder" formControlName="numeroPisos">
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Numero de habitaciones</mat-label>
+                    <input validar matInput placeholder="Placeholder" formControlName="numeroHabitaciones">
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Tarifa por noche (US)</mat-label>
+                    <input validar matInput placeholder="Placeholder" formControlName="tarifaPorNoche">
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Estatus</mat-label>
+                    <mat-select validar formControlName="pais">
+                        <mat-option value="activo">Activo</mat-option>
+                        <mat-option value="inactivo">Inactivo</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </p>
+            <div>
+                <button mat-raised-button color="primary" (click)="submitForm()">Registrar</button>
+            </div>
         </div>
-
-    </mat-card>
+    </form>
 </div>
