@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
-
-//Material
+import { CommonModule } from '@angular/common';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
@@ -15,26 +14,39 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { MatDialogModule } from '@angular/material/dialog';
 
-const MaterialComponets = [
-  MatCardModule,
-  MatButtonModule,
-  MatIconModule,
-  MatTableModule,
-  MatCheckboxModule,
-  MatFormFieldModule,
-  MatInputModule,
-  MatDatepickerModule,
-  MatNativeDateModule,
-  MatSelectModule,
-  MatPaginatorModule,
-  MatTooltipModule,
-  MatDialogModule
-]
 
 @NgModule({
+  declarations: [],
   imports: [
-    MaterialComponets
+    CommonModule, 
+    MatCardModule,
+    MatButtonModule,
+    MatIconModule,
+    MatTableModule,
+    MatCheckboxModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSelectModule,
+    MatPaginatorModule,
+    MatTooltipModule,
+    MatDialogModule
   ],
-  exports:[MaterialComponets]
+  exports:[    
+    CommonModule, 
+    MatCardModule,
+    MatButtonModule,
+    MatIconModule,
+    MatTableModule,
+    MatCheckboxModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSelectModule,
+    MatPaginatorModule,
+    MatTooltipModule,
+    MatDialogModule]
 })
 export class MaterialModule { }

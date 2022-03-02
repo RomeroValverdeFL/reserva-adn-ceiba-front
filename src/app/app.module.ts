@@ -8,6 +8,8 @@ import { CoreModule } from '@core/core.module';
 import { SucursalModule } from './feature/sucursal/sucursal.module';
 import { CookieService } from 'ngx-cookie-service';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MaterialModule} from '@core/material/material.module'
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { BrowserModule } from '@angular/platform-browser';
     ProductoModule,
     CoreModule,
     SucursalModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [CookieService],
     bootstrap: [AppComponent],
