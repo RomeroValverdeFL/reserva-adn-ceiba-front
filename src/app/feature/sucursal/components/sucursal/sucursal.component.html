@@ -1,0 +1,5 @@
+<div class="container">
+    <a *ngFor="let item of serviciosSucursalItems" [routerLink]="item.url" routerLinkActive="active">{{item.nombre}}</a>
+
+    <router-outlet></router-outlet>
+</div>
