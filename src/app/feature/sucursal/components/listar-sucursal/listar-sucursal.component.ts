@@ -7,6 +7,15 @@ import {Sucursal  } from '../../shared/model/sucursal';
 })
 export class ListarSucursalComponent implements OnInit {
   public listaSucursales:Sucursal[] = [];
+  Cabeceras: string[] = [
+    '#',
+    'Nombre',
+    'Descripcion',
+    'País',
+    'Ciudad',
+    'Direccion',
+    'Estado'
+  ];
   constructor() { }
 
   ngOnInit(): void {

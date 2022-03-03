@@ -12,9 +12,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class RegistrarSucursalComponent implements OnInit {
   reactiveForm: FormGroup;
-
   registroSucursal: RegistrarSucursal = RegistrarSucursal.unRegistroSucursal({}); 
-  
+  Paises: string[] = [
+    'Perú',
+    'Colombia'
+  ];
   constructor(private fb: FormBuilder,
     private sucursalService: SucursalService,) { }
 
@@ -28,7 +30,7 @@ export class RegistrarSucursalComponent implements OnInit {
       dimension:[this.registroSucursal.dimension,[Validators.required]],
       numeroPisos:[this.registroSucursal.numeroPisos,[Validators.required]],
       numeroHabitaciones:[this.registroSucursal.numeroHabitaciones,[Validators.required]],
-      imagenPortada:[this.registroSucursal.imagenPortada,[Validators.required,Validators.maxLength(30)]],
+      imagenPortada:'',
       tarifaPorNoche:[this.registroSucursal.tarifaPorNoche,[Validators.required]],
       status:[this.registroSucursal.status,[Validators.required,Validators.maxLength(30)]],
       
@@ -39,6 +41,9 @@ export class RegistrarSucursalComponent implements OnInit {
     });
   }
   registrarSucursal(registroSucursal: RegistrarSucursal):void {
+    debugger;
+    console.log('registroSucursal: ',registroSucursal);
+    registroSucursal.imagenPortada = '';
     this.sucursalService.registrarSucursal(registroSucursal).subscribe(
     resp => {
       console.log('success', resp)
@@ -61,6 +66,8 @@ export class RegistrarSucursalComponent implements OnInit {
   }
 
   submitForm(){
+    debugger;
+    console.log('submit:',this.registroSucursal)
     this.registrarSucursal(this.registroSucursal);
   }
 

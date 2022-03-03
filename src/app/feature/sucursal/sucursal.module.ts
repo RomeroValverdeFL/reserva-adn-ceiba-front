@@ -8,7 +8,7 @@ import { SucursalRoutingModule } from './sucursal-routing.module';
 import { RegistrarSucursalComponent } from './components/registrar-sucursal/registrar-sucursal.component';
 import { DatePipe } from '@angular/common';
 import { MaterialModule } from '@core/material/material.module';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,8 @@ import { MaterialModule } from '@core/material/material.module';
   imports: [
     SharedModule,
     SucursalRoutingModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   providers: [SucursalService, DatePipe],
 })
