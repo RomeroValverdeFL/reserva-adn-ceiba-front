@@ -1,6 +1,16 @@
 <div class="container-fluid">
     <h2>Listar sucursales</h2>
     <br>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="input-group mb-3">
+          <input  type="text" class="form-control" name="pais" placeholder="Ingrese el país" [(ngModel)]="pais">
+          <button style="margin-top: 0%;" class="btn btn-success" (click)="buscarPorPais()">BUSCAR</button>
+        </div>
+        
+      </div>
+    </div>
+
     <table class="table">
         <thead>
           <tr>
@@ -8,8 +18,19 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr *ngFor="let sucursal of listaSucursales">
             <!--<th scope="row">1</th>-->
+            <th scope="row">{{sucursal.id}}</th>
+            <td scope="row">{{sucursal.nombre}}</td>
+            <td scope="row">{{sucursal.descripcion}}</td>
+            <td scope="row">{{sucursal.pais}}</td>
+            <td scope="row">{{sucursal.ciudad}}</td>
+            <td scope="row">{{sucursal.direccion}}</td>
+            <td scope="row">{{sucursal.dimension}}</td>
+            <td scope="row">{{sucursal.numeroPisos}}</td>
+            <td scope="row">{{sucursal.numeroHabitaciones}}</td>
+            <td scope="row">{{sucursal.tarifaPorNoche}}</td>
+            <td scope="row">{{sucursal.status}}</td>
           </tr>
         </tbody>
       </table>

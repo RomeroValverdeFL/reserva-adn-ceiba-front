@@ -17,6 +17,9 @@ export class SucursalService {
     return this.http.doGet<Sucursal[]>(`${environment.endpoint}/sucursales/pais/${pais}`, this.http.optsName('consultar sucursales por pais'))
   }
 
+  public listar(){
+    return this.http.doGet<Sucursal[]>(`${environment.endpoint}/sucursales`, this.http.optsName('listar sucursales'))
+  }
 
   public registrarSucursal(registrarSucursal: RegistrarSucursal) {
     debugger;

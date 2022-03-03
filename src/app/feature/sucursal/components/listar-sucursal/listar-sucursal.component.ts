@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Sucursal  } from '../../shared/model/sucursal';
+import { SucursalService } from '../../shared/service/sucursal.service';
 @Component({
   selector: 'app-listar-sucursal',
   templateUrl: './listar-sucursal.component.html',
@@ -7,6 +8,7 @@ import {Sucursal  } from '../../shared/model/sucursal';
 })
 export class ListarSucursalComponent implements OnInit {
   public listaSucursales:Sucursal[] = [];
+  public pais:string;
   Cabeceras: string[] = [
     '#',
     'Nombre',
@@ -14,11 +16,29 @@ export class ListarSucursalComponent implements OnInit {
     'País',
     'Ciudad',
     'Direccion',
+    'Dimensión(mt2)',
+    'N° Pisos',
+    'N° Habitaciones',
+    'Tarifa/Noche (US)',
     'Estado'
   ];
-  constructor() { }
+  constructor(protected sucursalService: SucursalService) { }
 
   ngOnInit(): void {
+    this.listarSucursales();
+  }
+  listarSucursales(){
+    this.sucursalService.listar().subscribe((data: Sucursal[])=>{
+      console.log("data: ",data);
+      this.listaSucursales = data;
+    })
+  }
+  buscarPorPais(){
+    console.log("pais: ",this.pais);
+    this.sucursalService.consultarPorPais(this.pais).subscribe((data: Sucursal[])=>{
+      console.log("data: ",data);
+      this.listaSucursales = data;
+    })
   }
 
 }
