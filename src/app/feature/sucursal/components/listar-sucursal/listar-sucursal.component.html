@@ -1,4 +1,7 @@
-<div class="container-fluid">
+<div class="container-fluid"     class="tab-pane fade show active"
+id="ex1-tabs-1"
+role="tabpanel"
+aria-labelledby="ex1-tab-1">
     <h2>Listar sucursales</h2>
     <br>
     <div class="row">
@@ -12,7 +15,7 @@
     </div>
 
     <table class="table">
-        <thead>
+        <thead class="thead-dark">
           <tr>
               <th *ngFor="let cabecera of Cabeceras">{{cabecera}}</th>
           </tr>
