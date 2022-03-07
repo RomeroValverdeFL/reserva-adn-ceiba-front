@@ -40,7 +40,7 @@ describe('UsuarioService', () => {
         numeroTarjeta: '1234123412341234',
         fechaExpiracionTarjeta: '06/2026',
         cvvTarjeta: '123',
-        fechaCreacion: '2022-02-28'
+        fechaCreacion: null
       }), 
       Usuario.unUsuario({
         nombre: 'Luiz Romero',
@@ -53,7 +53,7 @@ describe('UsuarioService', () => {
         numeroTarjeta: '1234123412341236',
         fechaExpiracionTarjeta: '09/2026',
         cvvTarjeta: '456',
-        fechaCreacion: '2022-03-02'
+        fechaCreacion: null
       }), 
     ];
     service.consultarPorEmail('luiz@ceiba.com.co').subscribe(usuarios => {
@@ -78,7 +78,7 @@ describe('UsuarioService', () => {
         numeroTarjeta: '4455123412341236',
         fechaExpiracionTarjeta: '05/2028',
         cvvTarjeta: '789',
-        fechaCreacion: '2022-03-03'
+        fechaCreacion: null
       })
     service.registrarUsuario(dummyUsuario).subscribe((respuesta) => {
       expect(respuesta).toEqual(true);

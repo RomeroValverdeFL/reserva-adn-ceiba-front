@@ -26,7 +26,7 @@ export class RegistrarUsuarioComponent implements OnInit {
       numeroTarjeta:[this.registroUsuario.numeroTarjeta,[Validators.required]],
       fechaExpiracionTarjeta:[this.registroUsuario.fechaExpiracionTarjeta,[Validators.required]],
       cvvTarjeta:[this.registroUsuario.cvvTarjeta,[Validators.required]],
-      fechaCreacion:[this.registroUsuario.fechaCreacion,[Validators.required,Validators.maxLength(30)]],
+      fechaCreacion:null,
       
     })
     this.reactiveUsuarioForm.valueChanges.subscribe(value => {
