@@ -8,6 +8,7 @@ import { SharedModule } from '@shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterTestingModule } from '@angular/router/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { of } from 'rxjs';
 
 describe('ListarSucursalComponent', () => {
   let component: ListarSucursalComponent;
