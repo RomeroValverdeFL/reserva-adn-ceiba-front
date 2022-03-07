@@ -41,8 +41,6 @@ export class RegistrarSucursalComponent implements OnInit {
     });
   }
   registrarSucursal(registroSucursal: RegistrarSucursal):void {
-    debugger;
-    console.log('registroSucursal: ',registroSucursal);
     registroSucursal.imagenPortada = '';
     this.sucursalService.registrarSucursal(registroSucursal).subscribe(
     resp => {

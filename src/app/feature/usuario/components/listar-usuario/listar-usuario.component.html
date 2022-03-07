@@ -1,1 +1,35 @@
-<p>listar-usuario works!</p>
+<div class="container-fluid"     class="tab-pane fade show active"
+id="ex1-tabs-1"
+role="tabpanel"
+aria-labelledby="ex1-tab-1">
+    <h2>Listar usuarios</h2>
+    <br>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="input-group mb-3">
+          <input  type="text" class="form-control" name="email" placeholder="Ingrese el email" [(ngModel)]="email">
+          <button style="margin-top: 0%;" class="btn btn-success" (click)="buscarPorEmail()">BUSCAR</button>
+        </div>
+        
+      </div>
+    </div>
+
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+              <th *ngFor="let cabecera of Cabeceras">{{cabecera}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let usuario of listaUsuarios">
+            <!--<th scope="row">1</th>-->
+            <th scope="row">{{usuario.id}}</th>
+            <td scope="row">{{usuario.nombre}}</td>
+            <td scope="row">{{usuario.email}}</td>
+            <td scope="row">{{usuario.telefono}}</td>
+            <td scope="row">{{usuario.ocupacion}}</td>
+            <td scope="row">{{usuario.fechaCreacion}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>

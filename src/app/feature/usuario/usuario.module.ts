@@ -8,7 +8,7 @@ import { DatePipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { UsuarioService } from './shared/service/usuario.service';
 import { MaterialModule } from '@core/material/material.module';
-
+import { UsuarioRoutingModule } from './usuario-routing.module';
 @NgModule({
   declarations: [
     ListarUsuarioComponent,
@@ -17,6 +17,7 @@ import { MaterialModule } from '@core/material/material.module';
   ],
   imports: [
     SharedModule,
+    UsuarioRoutingModule,
     CommonModule,
     MaterialModule,
     FormsModule

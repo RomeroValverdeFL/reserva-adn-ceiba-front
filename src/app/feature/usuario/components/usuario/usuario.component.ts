@@ -9,8 +9,8 @@ export class UsuarioComponent implements OnInit {
 
   constructor() { }
   public serviciosUsuarioItems: MenuItem[] = [
-    { url: './registrar-usuario', nombre: 'Registrar usuario' },
-    { url: './listar-usuario', nombre: 'Listar usuarios' }
+    { url: './registrar', nombre: 'Registrar usuario' },
+    { url: './listar', nombre: 'Listar usuarios' }
     
   ];
   ngOnInit(): void {
