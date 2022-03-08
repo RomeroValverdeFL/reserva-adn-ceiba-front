@@ -5,7 +5,7 @@ import { SucursalPage } from '../page/sucursal/sucursalPage.po';
 import { ConsultarSucursalPage } from '../page/sucursal/consultarSucursalesPage.po';
 
 
-describe('workspace-project Comparendo', () => {
+describe('workspace-project Sucursal', () => {
     let page: AppPage;
     let navBar: NavbarPage;
     let sucursalPage: SucursalPage
@@ -22,13 +22,13 @@ describe('workspace-project Comparendo', () => {
 
     it('Deberia listar una sucursal', async () => {
       
-        String PAIS;
+        const pais='Colombia';
         page.navigateTo();
-        navBar.clickBotonProductos();
-        sucursalPage.clickLinkListarComparendo();
-        consultarSucursalPage.ingresarPais(PAIS);
-        consultarSucursalPage.clickBotonBuscarComparendo();
-        expect(true).toBe(await consultarComparendoPage.contarComparendos()>0);
+        navBar.clickBotonSucursales();
+        sucursalPage.clickLinkListarSucursal();
+        consultarSucursalPage.ingresarPais(pais);
+        consultarSucursalPage.clickBotonBuscarSucursal();
+        expect(true).toBe(await consultarSucursalPage.contarSucursales()>0);
        
     });
 

@@ -30,7 +30,7 @@ describe('SucursalService', () => {
   it('deberia listar sucursales por pais', () => {
     const dummySucursales = [
       Sucursal.unSucursal({
-        nombre: 'A1000',
+        nombre: 'A1001',
         descripcion:'Departamento duplex seccion A',
         pais: 'Colombia',
         ciudad: 'Medellín',
@@ -43,10 +43,10 @@ describe('SucursalService', () => {
         status: 'ACTIVO'
       }), 
       Sucursal.unSucursal({
-        nombre: 'B1000',
+        nombre: 'B1001',
         descripcion:'Departamento duplex seccion B',
-        pais: 'Perú',
-        ciudad: 'Lima',
+        pais: 'Colombia',
+        ciudad: 'Medellín',
         direccion: 'Ca. Molina 124',
         dimension: 110,
         numeroPisos:2,
@@ -68,10 +68,10 @@ describe('SucursalService', () => {
   it('deberia crear una sucursal', () => {
     const dummySucursal = 
       RegistrarSucursal.unRegistroSucursal({
-        nombre: 'B1000',
+        nombre: 'B1002',
         descripcion:'Departamento duplex seccion B',
-        pais: 'Perú',
-        ciudad: 'Lima',
+        pais: 'Colombia',
+        ciudad: 'Medellín',
         direccion: 'Ca. Molina 124',
         dimension: 110,
         numeroPisos:2,

@@ -47,7 +47,7 @@ describe('RegistrarSucursalComponent', () => {
   
   it('Registrando sucursal',()=>{
     expect(component.reactiveForm.invalid).toBeTrue();
-    component.reactiveForm.controls.nombre.setValue('A1000');
+    component.reactiveForm.controls.nombre.setValue('A1300');
     component.reactiveForm.controls.descripcion.setValue('Departamento duplex seccion A');
     component.reactiveForm.controls.pais.setValue('Colombia');
     component.reactiveForm.controls.ciudad.setValue('Medellín');

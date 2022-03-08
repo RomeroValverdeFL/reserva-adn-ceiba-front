@@ -29,11 +29,11 @@ describe('ListarSucursalComponent', () => {
       status: 'ACTIVO'
     }),
     Sucursal.unSucursal({
-      nombre: 'A1000',
+      nombre: 'A2000',
       descripcion: 'Departamento duplex seccion A',
       pais: 'Colombia',
-      ciudad: 'Medellín',
-      direccion: 'Ca. Palmeras 123',
+      ciudad: 'Medellin',
+      direccion: 'Ca. Palmeras 126',
       dimension: 110,
       numeroPisos: 2,
       numeroHabitaciones: 4,
@@ -72,8 +72,9 @@ describe('ListarSucursalComponent', () => {
     expect(component).toBeTruthy();
   });
   it('Deberia listar sucursales por país', ()=>{
+    //component.pais = "España";
     component.buscarPorPais()
-    expect(2).toBe(component.listarSucursales.length)
+    expect(2).toBe(component.listaSucursales.length);
     expect(sucursalService.consultarPorPais).toHaveBeenCalled();
   });
 });

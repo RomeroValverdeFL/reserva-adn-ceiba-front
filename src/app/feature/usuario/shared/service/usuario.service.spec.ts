@@ -27,11 +27,11 @@ describe('UsuarioService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('deberia listar usuarios por email', () => {
+  it('deberiass listar usuarios por email', () => {
     const dummyUsuarios = [
         Usuario.unUsuario({
-        nombre: 'test',
-        email:'test@ceiba.com.co',
+        nombre: 'Noe Romero',
+        email:'luiz@ceiba.com.co',
         telefono: '958797188',
         ocupacion: 'desarrollador',
         clave: '1234',
@@ -41,7 +41,7 @@ describe('UsuarioService', () => {
         fechaExpiracionTarjeta: '06/2026',
         cvvTarjeta: '123',
         fechaCreacion: null
-      }), 
+      })/*, 
       Usuario.unUsuario({
         nombre: 'Luiz Romero',
         email:'luiz@ceiba.com.co',
@@ -54,10 +54,11 @@ describe('UsuarioService', () => {
         fechaExpiracionTarjeta: '09/2026',
         cvvTarjeta: '456',
         fechaCreacion: null
-      }), 
+      }),*/
     ];
     service.consultarPorEmail('luiz@ceiba.com.co').subscribe(usuarios => {
-      expect(usuarios.length).toBe(2);
+      console.log('servicio: ',usuarios);
+      expect(usuarios.length).toBe(1);
       expect(usuarios).toEqual(dummyUsuarios);
     });
     const req = httpMock.expectOne(`${apiEndpointUsuarioPorEmail}/luiz@ceiba.com.co`);
@@ -68,8 +69,8 @@ describe('UsuarioService', () => {
   it('deberia crear un usuario', () => {
     const dummyUsuario = 
       RegistrarUsuario.unRegistroUsuario({
-        nombre: 'Francisco Velarde',
-        email:'francisco@ceiba.com.co',
+        nombre: 'Frans Velarde',
+        email:'luiz@ceiba.com.co',
         telefono: '5135253545',
         ocupacion: 'contador',
         clave: '8765',

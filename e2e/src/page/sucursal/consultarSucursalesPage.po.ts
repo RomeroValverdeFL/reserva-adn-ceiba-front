@@ -16,7 +16,7 @@ export class ConsultarSucursalPage{
     }
 
 
-    async contarComparendos() {
+    async contarSucursales() {
         return this.rows.count();
     }
 
