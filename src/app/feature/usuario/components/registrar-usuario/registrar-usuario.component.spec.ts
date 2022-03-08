@@ -10,7 +10,7 @@ import { UsuarioService } from '@usuario/shared/service/usuario.service';
 import { of } from 'rxjs';
 
 import { RegistrarUsuarioComponent } from './registrar-usuario.component';
-
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 describe('RegistrarUsuarioComponent', () => {
   let component: RegistrarUsuarioComponent;
   let fixture: ComponentFixture<RegistrarUsuarioComponent>;
@@ -18,6 +18,7 @@ describe('RegistrarUsuarioComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ RegistrarUsuarioComponent ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
       imports: [
         SharedModule,
         SucursalRoutingModule,

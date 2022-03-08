@@ -9,6 +9,7 @@ import { RegistrarSucursalComponent } from './registrar-sucursal.component';
 import { SharedModule } from '@shared/shared.module';
 import { HttpService } from '@core/services/http.service';
 import { of, throwError } from 'rxjs';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 describe('RegistrarSucursalComponent', () => {
   let component: RegistrarSucursalComponent;
   let service: SucursalService;
@@ -24,6 +25,7 @@ describe('RegistrarSucursalComponent', () => {
         HttpClientTestingModule,
         RouterTestingModule
       ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
       providers: [SucursalService, DatePipe, HttpService]
     })
     .compileComponents();

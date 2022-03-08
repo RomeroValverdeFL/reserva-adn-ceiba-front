@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { SucursalComponent } from './sucursal.component';
 
 describe('SucursalComponent', () => {
@@ -8,7 +8,8 @@ describe('SucursalComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SucursalComponent ]
+      declarations: [ SucursalComponent ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   });

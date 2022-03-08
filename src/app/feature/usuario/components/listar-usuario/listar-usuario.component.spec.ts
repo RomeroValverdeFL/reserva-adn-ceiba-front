@@ -8,7 +8,7 @@ import { SharedModule } from '@shared/shared.module';
 import { Usuario } from '@usuario/shared/model/usuario';
 import { UsuarioService } from '@usuario/shared/service/usuario.service';
 import { of } from 'rxjs';
-
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ListarUsuarioComponent } from './listar-usuario.component';
 
 describe('ListarUsuarioComponent', () => {
@@ -53,6 +53,7 @@ describe('ListarUsuarioComponent', () => {
         RouterTestingModule,
         BrowserAnimationsModule
       ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
       providers: [UsuarioService, 
         DatePipe, HttpService, ]
     })
