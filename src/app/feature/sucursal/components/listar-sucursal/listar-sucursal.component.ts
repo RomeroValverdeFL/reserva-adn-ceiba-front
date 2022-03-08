@@ -6,7 +6,7 @@ import { SucursalService } from '../../shared/service/sucursal.service';
   templateUrl: './listar-sucursal.component.html'
 })
 export class ListarSucursalComponent implements OnInit {
-  public listaSucursales:Sucursal[] = [];
+  public listaSucursales: Sucursal[] = [];
   public pais:string;
   Cabeceras: string[] = [
     '#',
