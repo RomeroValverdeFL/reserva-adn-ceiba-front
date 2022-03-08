@@ -41,11 +41,6 @@ describe('RegistrarSucursalComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  it('Debe retornar formulario invalido cuando esta vacio',()=>{
-    expect(component.reactiveForm.invalid).toBeTrue();
-  })
-
   
   it('Registrando sucursal',()=>{
     expect(component.reactiveForm.invalid).toBeTrue();
