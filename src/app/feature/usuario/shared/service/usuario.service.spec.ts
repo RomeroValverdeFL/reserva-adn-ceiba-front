@@ -57,7 +57,6 @@ describe('UsuarioService', () => {
       }),*/
     ];
     service.consultarPorEmail('luiz@ceiba.com.co').subscribe(usuarios => {
-      console.log('servicio: ',usuarios);
       expect(usuarios.length).toBe(1);
       expect(usuarios).toEqual(dummyUsuarios);
     });

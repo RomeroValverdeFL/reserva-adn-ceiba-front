@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RegistrarUsuario } from '@usuario/shared/model/registrarUsuario';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UsuarioService } from '@usuario/shared/service/usuario.service';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-registrar-usuario',
   templateUrl: './registrar-usuario.component.html',
@@ -16,11 +16,11 @@ export class RegistrarUsuarioComponent implements OnInit {
 
   ngOnInit(): void {
     this.reactiveUsuarioForm = this.fb.group({
-      nombre:[this.registroUsuario.nombre,[Validators.required, Validators.maxLength(30)]],
-      email:[this.registroUsuario.email,[Validators.required, Validators.maxLength(30)]],
-      telefono:[this.registroUsuario.telefono,[Validators.required,Validators.maxLength(30)]],
-      ocupacion:[this.registroUsuario.ocupacion,[Validators.required,Validators.maxLength(30)]],
-      clave:[this.registroUsuario.clave,[Validators.required,Validators.maxLength(30)]],
+      nombre:[this.registroUsuario.nombre,[Validators.required]],
+      email:[this.registroUsuario.email,[Validators.required]],
+      telefono:[this.registroUsuario.telefono,[Validators.required ]],
+      ocupacion:[this.registroUsuario.ocupacion,[Validators.required ]],
+      clave:[this.registroUsuario.clave,[Validators.required ]],
       tipoTarjeta:[this.registroUsuario.tipoTarjeta,[Validators.required]],
       nombrePropietarioTarjeta:[this.registroUsuario.nombrePropietarioTarjeta,[Validators.required]],
       numeroTarjeta:[this.registroUsuario.numeroTarjeta,[Validators.required]],
@@ -35,28 +35,24 @@ export class RegistrarUsuarioComponent implements OnInit {
   }
   registrarUsuario(registroUsuario: RegistrarUsuario):void {
     this.usuarioService.registrarUsuario(registroUsuario).subscribe(
-    resp => {
-      console.log('success', resp)
+    () => {
         Swal.fire({
           icon: 'success',
           title: 'Exito',
           text: 'El usuario ha sido registrado correctamente'
-        })
+        });
         this.reactiveUsuarioForm.reset();
     },
     error => {
-      console.log('oops', error)
       Swal.fire({
         icon: 'error',
         title: 'Error',
         text: error.error?.['mensaje']
-      })
+      });
     })
 
   }
   submitForm(){
-    debugger;
-    console.log('submit:',this.registroUsuario)
     this.registrarUsuario(this.registroUsuario);
   }
 }

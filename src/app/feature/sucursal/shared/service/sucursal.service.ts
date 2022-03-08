@@ -22,7 +22,6 @@ export class SucursalService {
   }
 
   public registrarSucursal(registrarSucursal: RegistrarSucursal) {
-    debugger;
     return this.http.doPost<RegistrarSucursal, boolean>(`${environment.endpoint}/sucursales`, registrarSucursal,
                                                 this.http.optsName('registrar sucursales'));
   }

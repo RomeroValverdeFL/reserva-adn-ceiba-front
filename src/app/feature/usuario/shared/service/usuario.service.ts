@@ -22,7 +22,6 @@ export class UsuarioService {
   }
 
   public registrarUsuario(registrarUsuario: RegistrarUsuario) {
-    debugger;
     return this.http.doPost<RegistrarUsuario, boolean>(`${environment.endpoint}/usuarios`, registrarUsuario,
                                                 this.http.optsName('registrar usuarios'));
   }

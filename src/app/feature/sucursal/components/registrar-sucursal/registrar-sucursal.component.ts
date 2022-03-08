@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { RegistrarSucursal } from '../../shared/model/registrarSucursal';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 import { SucursalService } from '../../shared/service/sucursal.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -22,17 +22,17 @@ export class RegistrarSucursalComponent implements OnInit {
 
   ngOnInit(): void {
     this.reactiveForm = this.fb.group({
-      nombre:[this.registroSucursal.nombre,[Validators.required, Validators.maxLength(30)]],
-      descripcion:[this.registroSucursal.descripcion,[Validators.required, Validators.maxLength(30)]],
-      pais:[this.registroSucursal.pais,[Validators.required,Validators.maxLength(30)]],
-      ciudad:[this.registroSucursal.ciudad,[Validators.required,Validators.maxLength(30)]],
-      direccion:[this.registroSucursal.direccion,[Validators.required,Validators.maxLength(30)]],
+      nombre:[this.registroSucursal.nombre,[Validators.required]],
+      descripcion:[this.registroSucursal.descripcion,[Validators.required]],
+      pais:[this.registroSucursal.pais,[Validators.required ]],
+      ciudad:[this.registroSucursal.ciudad,[Validators.required ]],
+      direccion:[this.registroSucursal.direccion,[Validators.required ]],
       dimension:[this.registroSucursal.dimension,[Validators.required]],
       numeroPisos:[this.registroSucursal.numeroPisos,[Validators.required]],
       numeroHabitaciones:[this.registroSucursal.numeroHabitaciones,[Validators.required]],
       imagenPortada:'',
       tarifaPorNoche:[this.registroSucursal.tarifaPorNoche,[Validators.required]],
-      status:[this.registroSucursal.status,[Validators.required,Validators.maxLength(30)]],
+      status:[this.registroSucursal.status,[Validators.required ]],
       
     })
   
@@ -43,29 +43,25 @@ export class RegistrarSucursalComponent implements OnInit {
   registrarSucursal(registroSucursal: RegistrarSucursal):void {
     registroSucursal.imagenPortada = '';
     this.sucursalService.registrarSucursal(registroSucursal).subscribe(
-    resp => {
-      console.log('success', resp)
+    () => {
         Swal.fire({
           icon: 'success',
           title: 'Exito',
           text: 'La sucursal ha sido registrado correctamente'
-        })
+        });
         this.reactiveForm.reset();
     },
     error => {
-      console.log('oops', error)
       Swal.fire({
         icon: 'error',
         title: 'Error',
         text: error.error?.['mensaje']
-      })
+      });
     })
     
   }
 
   submitForm(){
-    debugger;
-    console.log('submit:',this.registroSucursal)
     this.registrarSucursal(this.registroSucursal);
   }
 

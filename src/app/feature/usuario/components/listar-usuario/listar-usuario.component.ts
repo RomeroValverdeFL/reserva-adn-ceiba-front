@@ -24,14 +24,11 @@ export class ListarUsuarioComponent implements OnInit {
   }
   listarUsuarios(){
     this.usuarioService.listar().subscribe((data: Usuario[])=>{
-      console.log("data: ",data);
       this.listaUsuarios = data;
     })
   }
   buscarPorEmail(){
-    console.log("email: ",this.email);
     this.usuarioService.consultarPorEmail(this.email).subscribe((data: Usuario[])=>{
-      console.log("data: ",data);
       this.listaUsuarios = data;
     })
   }

@@ -8,7 +8,7 @@ import { SucursalModule } from './feature/sucursal/sucursal.module';
 import { CookieService } from 'ngx-cookie-service';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MaterialModule} from '@core/material/material.module'
+import {MaterialModule} from '@core/material/material.module';
 import { UsuarioModule } from '@usuario/usuario.module';
 @NgModule({
   declarations: [

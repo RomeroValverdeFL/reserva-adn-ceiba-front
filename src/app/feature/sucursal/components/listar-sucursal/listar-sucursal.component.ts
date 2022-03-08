@@ -29,14 +29,11 @@ export class ListarSucursalComponent implements OnInit {
   }
   listarSucursales(){
     this.sucursalService.listar().subscribe((data: Sucursal[])=>{
-      console.log("data: ",data);
       this.listaSucursales = data;
     })
   }
   buscarPorPais(){
-    console.log("pais: ",this.pais);
     this.sucursalService.consultarPorPais(this.pais).subscribe((data: Sucursal[])=>{
-      console.log("data: ",data);
       this.listaSucursales = data;
     })
   }
