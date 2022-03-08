@@ -4,8 +4,7 @@ import { UsuarioService } from '@usuario/shared/service/usuario.service';
 
 @Component({
   selector: 'app-listar-usuario',
-  templateUrl: './listar-usuario.component.html',
-  styleUrls: ['./listar-usuario.component.css']
+  templateUrl: './listar-usuario.component.html'
 })
 export class ListarUsuarioComponent implements OnInit {
   public listaUsuarios:Usuario[] = [];

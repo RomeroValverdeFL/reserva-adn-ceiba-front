@@ -5,8 +5,7 @@ import { UsuarioService } from '@usuario/shared/service/usuario.service';
 import Swal from 'sweetalert2';
 @Component({
   selector: 'app-registrar-usuario',
-  templateUrl: './registrar-usuario.component.html',
-  styleUrls: ['./registrar-usuario.component.css']
+  templateUrl: './registrar-usuario.component.html'
 })
 export class RegistrarUsuarioComponent implements OnInit {
   reactiveUsuarioForm: FormGroup;

@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem } from '@core/modelo/menu-item';
 @Component({
   selector: 'app-sucursal',
-  templateUrl: './sucursal.component.html',
-  styleUrls: ['./sucursal.component.css']
+  templateUrl: './sucursal.component.html'
 })
 export class SucursalComponent implements OnInit {
 

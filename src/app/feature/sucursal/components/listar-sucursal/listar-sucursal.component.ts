@@ -3,8 +3,7 @@ import {Sucursal  } from '../../shared/model/sucursal';
 import { SucursalService } from '../../shared/service/sucursal.service';
 @Component({
   selector: 'app-listar-sucursal',
-  templateUrl: './listar-sucursal.component.html',
-  styleUrls: ['./listar-sucursal.component.css']
+  templateUrl: './listar-sucursal.component.html'
 })
 export class ListarSucursalComponent implements OnInit {
   public listaSucursales:Sucursal[] = [];
