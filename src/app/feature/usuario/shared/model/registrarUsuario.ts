@@ -13,9 +13,8 @@ export class RegistrarUsuario {
             obj['fechaExpiracionTarjeta'],
             obj['cvvTarjeta'],
             obj['fechaCreacion']
-        
         )
-    }
+    };
 
     constructor( 
         public nombre: string,

@@ -13,9 +13,8 @@ export class RegistrarSucursal {
             obj['imagenPortada'],
             obj['tarifaPorNoche'],
             obj['status']
-        
         )
-    }
+    };
 
     constructor( 
         public nombre: string,

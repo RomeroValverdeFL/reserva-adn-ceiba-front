@@ -7,8 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-registrar-sucursal',
-  templateUrl: './registrar-sucursal.component.html',
-  styleUrls: ['./registrar-sucursal.component.css']
+  templateUrl: './registrar-sucursal.component.html'
 })
 export class RegistrarSucursalComponent implements OnInit {
   reactiveForm: FormGroup;

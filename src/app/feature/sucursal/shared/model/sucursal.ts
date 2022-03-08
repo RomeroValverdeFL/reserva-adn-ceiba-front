@@ -12,10 +12,9 @@ export class Sucursal {
             obj['numeroHabitaciones'],
             obj['imagenPortada'],
             obj['tarifaPorNoche'],
-            obj['status']
-            
+            obj['status'] 
         )
-    }
+    };
 
     constructor( 
         public nombre: string,
