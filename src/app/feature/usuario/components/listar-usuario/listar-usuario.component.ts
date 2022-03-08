@@ -15,8 +15,7 @@ export class ListarUsuarioComponent implements OnInit {
     'Nombre',
     'Email',
     'Teléfono',
-    'Ocupación',
-    'Fecha Creación'
+    'Ocupación'
   ];
   constructor(protected usuarioService: UsuarioService) { }
 
